@@ -1,6 +1,7 @@
 defmodule ReturnHelpers do
   @moduledoc """
-  simple library that adds a piping possibility for easy returning from liveview
+  Simple library that adds a piping possibility for easy returning from liveview
+
   Imagine
   ```
     socket =
