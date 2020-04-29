@@ -2,15 +2,19 @@ defmodule ReturnHelpers do
   @moduledoc """
   simple library that adds a piping possibility for easy returning from liveview
   Imagine
+  ```
     socket =
       socket
       |> assign(valid: true)
     {:noreply, socket}
+  ```
 
   to write like:
+  ```
     socket
     |> assign(valid: true)
     |> noreply()
+  ```
 
   Looks cleaner ?
   """

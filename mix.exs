@@ -4,7 +4,7 @@ defmodule ReturnHelpers.MixProject do
   def project do
     [
       app: :return_helpers,
-      version: "0.0.1",
+      version: "0.0.2",
       elixir: "~> 1.0",
       build_embedded: Mix.env == :prod,
       start_permanent: Mix.env() == :prod,
@@ -19,18 +19,18 @@ defmodule ReturnHelpers.MixProject do
     simple library that adds a piping possibility for easy returning from pipe chains
     Imagine:
       ```
-      socket =
+     socket =
         socket
         |> assign(valid: true)
       {:noreply, socket}
       ```
 
     to write as:
-      ```
-      socket
-      |> assign(valid: true)
-      |> noreply()
-      ```
+    ```
+    socket
+    |> assign(valid: true)
+    |> noreply()
+    ```
 
     Looks cleaner ?
     """
@@ -38,7 +38,7 @@ defmodule ReturnHelpers.MixProject do
 
   defp package do
     [
-      files: ["lib", "mix.exs", "README*"],
+      files: ["lib", "mix.exs", "README*", "test", "doc"],
       maintainers: ["Daniel Kukula"],
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/dkuku/return_helpers"}

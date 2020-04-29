@@ -12,4 +12,9 @@ defmodule ReturnHelpersTest do
     socket = "socket"
     assert noreply(socket) == {:noreply, socket}
   end
+
+  test "reply returns proper value" do
+    socket = "socket"
+    assert reply(socket) == {:reply, socket}
+  end
 end
