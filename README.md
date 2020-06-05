@@ -31,6 +31,14 @@ iex(4)> socket |> noreply()
 {:noreply, %{}}
 ```
 
+## Helpers provided
+
+- reply
+- noreply
+- stop
+- ok
+- error
+
 ## Installation
 
 By adding `return_helpers` to your list of dependencies in `mix.exs`:
@@ -38,14 +46,19 @@ By adding `return_helpers` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:return_helpers, "~> 0.0.3"}
+    {:return_helpers, "~> 0.1.0"}
   ]
 end
 ```
 
-## Usage
+## Usage with liveview
 ```
-import ReturnHelpers
+  defp view_helpers do
+    quote do
+      ...
+      import ReturnHelpers
+    end
+  end
 ```
 globally for views
 

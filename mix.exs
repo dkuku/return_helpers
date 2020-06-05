@@ -4,9 +4,9 @@ defmodule ReturnHelpers.MixProject do
   def project do
     [
       app: :return_helpers,
-      version: "0.0.3",
+      version: "0.1.0",
       elixir: "~> 1.0",
-      build_embedded: Mix.env == :prod,
+      build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
       description: description(),
       package: package(),
