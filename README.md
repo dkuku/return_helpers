@@ -1,4 +1,4 @@
-# ReturnHelpers
+# Elixir Return Helpers
 ## Description
 
 Simple library that adds a piping possibility for easy returning from liveview
@@ -32,12 +32,18 @@ iex(4)> socket |> noreply()
 ```
 
 ## Helpers provided
-
-- reply
-- noreply
-- stop
-- ok
-- error
+- error/1
+- noreply/1
+- noreply/2
+- noreply/3
+- ok/1
+- ok/2
+- reply/1
+- reply/2
+- reply/3
+- stop/1
+- stop/2
+- stop/3
 
 ## Installation
 
