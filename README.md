@@ -1,7 +1,8 @@
 # Elixir Return Helpers
 ## Description
 
-Simple library that adds a piping possibility for easy returning from liveview
+Simple library that adds a piping possibility for easy returning from pipes
+Documentation https://hexdocs.pm/return_helpers/api-reference.html
 
 Imagine
 
@@ -19,16 +20,25 @@ socket
 |> noreply()
 ```
 
+or:
+```elixir
+socket |> assign(valid: true) |> noreply()
+```
+
 Looks cleaner ?
 
 ## Examples
 ```elixir
-iex(2)> socket = %{}
+iex> socket = %{}
 %{}
-iex(3)> socket |> ok()
+iex> socket |> ok()
 {:ok, %{}}
-iex(4)> socket |> noreply()
+iex> socket |> noreply()
 {:noreply, %{}}
+iex> %{} |> to_tuple(:error, "params") 
+{:error, %{}, "params"}
+iex> "34" |> between_strings("12", "56")
+"123456"
 ```
 
 ## Helpers provided
@@ -44,6 +54,9 @@ iex(4)> socket |> noreply()
 - stop/1
 - stop/2
 - stop/3
+- to_tuple/2
+- to_tuple/3
+- between_strings/3
 
 ## Installation
 
