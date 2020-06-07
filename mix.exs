@@ -10,7 +10,8 @@ defmodule ReturnHelpers.MixProject do
       start_permanent: Mix.env() == :prod,
       description: description(),
       package: package(),
-      deps: deps()
+      deps: deps(),
+      test_coverage: [tool: ExCoveralls]
     ]
   end
 
@@ -48,7 +49,8 @@ defmodule ReturnHelpers.MixProject do
 
   defp deps do
     [
-      {:ex_doc, "~> 0.21", only: :dev}
+      {:ex_doc, "~> 0.21", only: :dev},
+      {:excoveralls, "~> 0.12", only: [:test]}
     ]
   end
 end
