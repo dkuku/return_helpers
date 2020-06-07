@@ -106,6 +106,6 @@ defmodule ReturnHelpers do
     "123456"
   """
   def between_strings(piped, string1, string2) do
-    string1 <> piped <> string2
+    IO.iodata_to_binary([string1, piped, string2])
   end
 end
