@@ -1,4 +1,7 @@
 # Elixir Return Helpers
+
+[![Coverage Status](https://coveralls.io/repos/github/dkuku/return_helpers/badge.svg?branch=master)](https://coveralls.io/github/dkuku/return_helpers?branch=master)
+
 ## Description
 
 Simple library that adds a piping possibility for easy returning from pipes
