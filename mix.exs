@@ -28,15 +28,12 @@ defmodule ReturnHelpers.MixProject do
 
     to write as:
 
-      socket
-      |> assign(valid: true)
-      |> noreply()
+      socket |> assign(valid: true) |> noreply()
 
     or:
-      iex> "34" |> between_strings("12", "56")
-      "123456"
 
-    Looks cleaner ?
+      "34" |> between_strings("12", "56")
+      "123456"
     """
   end
 

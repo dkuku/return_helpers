@@ -2,6 +2,7 @@
 ## Description
 
 Simple library that adds a piping possibility for easy returning from pipes
+
 Documentation https://hexdocs.pm/return_helpers/api-reference.html
 
 Imagine
@@ -29,14 +30,15 @@ Looks cleaner ?
 
 ## Examples
 ```elixir
-iex> socket = %{}
-%{}
-iex> socket |> ok()
+iex> %{} |> ok()
 {:ok, %{}}
-iex> socket |> noreply()
+
+iex> %{} |> noreply()
 {:noreply, %{}}
+
 iex> %{} |> to_tuple(:error, "params") 
 {:error, %{}, "params"}
+
 iex> "34" |> between_strings("12", "56")
 "123456"
 ```
